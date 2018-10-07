@@ -1,3 +1,12 @@
 #!/usr/bin/env ruby
 require 'pry'
 require_relative '../lib/tic_tac_toe.rb'
+
+intro = puts "Choose a position. 1-9"
+input_to_index(gets)
+if position_taken == false && valid_move == true
+  move(index,token)
+  puts display_board
+else
+  intro
+end
