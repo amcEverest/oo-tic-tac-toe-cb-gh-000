@@ -4,7 +4,7 @@ class TicTacToe
   end
   WIN_COMBINATIONS = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8],
    [0,4,8], [2,4,6]]
-   def display_board(@board[input_to_index])
+   def display_board()
      puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
      puts "-----------"
      puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
@@ -15,7 +15,20 @@ class TicTacToe
      @index = input.to_i - 1
      return @index
    end
-   def move()
-
+   def move(@board[input_to_index], token= "X")
+     @token = token
    end
+   def position_taken
+     if move[0] == " "
+       return false
+     else
+       return true
+   end
+   def valid_move
+     if move[0] == " "
+       return true
+     else
+       return false
+   end
+   def turn
 end
